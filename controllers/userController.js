@@ -37,7 +37,10 @@ const showUsers = async (req, res) => {
   try {
     const result = await userModel.find();
     res.status(200).json(result);
-  } catch (err) {}
+  } catch (err) {
+    console.log(err);
+    res.status(400).json({ message: "Something went wrong" });
+  }
 };
 
 const login = async (req, res) => {
