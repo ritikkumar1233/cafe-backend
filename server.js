@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import userRouter from "./routes/userRoute.js";
 
 dotenv.config();
+
 const app = express();
 
 const dbuser = encodeURIComponent(process.env.DBUSER);
